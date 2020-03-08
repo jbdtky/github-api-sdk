@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3BDE4E8F2414D3EE00EE14E2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5DC342414962E0082500F /* Info.plist */; };
+		3BDE4E912414D7B200EE14E2 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE4E902414D7B200EE14E2 /* Log.swift */; };
+		3BDE4E932414DAB100EE14E2 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDE4E922414DAB100EE14E2 /* Date+Extensions.swift */; };
 		3BE5DBFF241490FE0082500F /* GithubAPISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5DBF5241490FE0082500F /* GithubAPISDK.framework */; };
 		3BE5DC21241491970082500F /* APIThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC18241491970082500F /* APIThrottler.swift */; };
 		3BE5DC22241491970082500F /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC19241491970082500F /* APIProvider.swift */; };
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3BDE4E902414D7B200EE14E2 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		3BDE4E922414DAB100EE14E2 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		3BE5DBF5241490FE0082500F /* GithubAPISDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GithubAPISDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE5DBFE241490FE0082500F /* GithubAPISDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GithubAPISDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE5DC05241490FE0082500F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 				3BE5DC14241491970082500F /* Models */,
 				3BE5DC17241491970082500F /* Network */,
 				3BE5DC1C241491970082500F /* GithubAPISDK.swift */,
+				3BDE4E902414D7B200EE14E2 /* Log.swift */,
 			);
 			path = GithubAPISDK;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				3BE5DC1E241491970082500F /* URL+Extensions.swift */,
+				3BDE4E922414DAB100EE14E2 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BDE4E8F2414D3EE00EE14E2 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,10 +281,12 @@
 			files = (
 				3BE5DC3C24149A2F0082500F /* Repository.swift in Sources */,
 				3BE5DC25241491970082500F /* URL+Extensions.swift in Sources */,
+				3BDE4E932414DAB100EE14E2 /* Date+Extensions.swift in Sources */,
 				3BE5DC22241491970082500F /* APIProvider.swift in Sources */,
 				3BE5DC21241491970082500F /* APIThrottler.swift in Sources */,
 				3BE5DC23241491970082500F /* APIRequest.swift in Sources */,
 				3BE5DC3A241499D70082500F /* FetchRepositoriesResponse.swift in Sources */,
+				3BDE4E912414D7B200EE14E2 /* Log.swift in Sources */,
 				3BE5DC24241491970082500F /* GithubAPISDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

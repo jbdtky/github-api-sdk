@@ -9,9 +9,9 @@
 import Foundation
 
 public struct FetchRepositoriesResponse: Decodable {
-    var repositories: [Repository]
-    var totalCount: Int
-    var incompleteResults: Bool
+    public var repositories: [Repository]
+    public var totalCount: Int
+    public var incompleteResults: Bool
     
     enum CodingKeys: String, CodingKey {
         case repositories = "items"

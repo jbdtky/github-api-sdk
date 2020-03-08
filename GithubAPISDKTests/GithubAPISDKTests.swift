@@ -15,17 +15,23 @@ class GithubAPISDKTests: XCTestCase {
         let provider = APIProviderMock()
         let sdk = GithubAPISDK(provider)
         
+        let expectSuccess = expectation(description: "Success call")
+        
         sdk.fetchRepositories(.ios, organization: "test") { response in
             switch response {
             case let .success(response):
                 XCTAssertFalse(response.incompleteResults)
                 XCTAssertEqual(response.totalCount, 8)
                 XCTAssertEqual(response.repositories.count, 8)
+                
+                expectSuccess.fulfill()
                 /// Check more in deep the details
             case .failure:
                 XCTFail()
             }
         }
+        
+        wait(for: [expectSuccess], timeout: 5.0)
     }
     
     /// TODO:
