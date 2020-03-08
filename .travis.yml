@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode11.1
+script:
+  - xcodebuild -project GithubAPISDK.xcodeproj -scheme GithubAPISDK -destination platform\=iOS\ Simulator,OS\=13.1,name\=iPhone\ 11 -enableCodeCoverage YES test > /dev/null
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -J 'GithubAPISDK' > /dev/null
