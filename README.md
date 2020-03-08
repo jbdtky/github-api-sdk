@@ -41,8 +41,8 @@ let instance = GithubAPISDK(
 
 instance.fetchRepositories(.ios, organization: "myorg") { result in
     switch result {
-    case let .success(response):
-        print(response.repositories)
+    case let .success(repositories):
+        print(repositories)
     case let .failure(error):
         print(error)
     }

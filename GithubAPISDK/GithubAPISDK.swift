@@ -14,7 +14,7 @@ public enum Platform: String {
 }
 
 public protocol GithubAPISDKProtocol {
-    func fetchRepositories(_ platform: Platform, organization: String, completion: @escaping (Result<FetchRepositoriesResponse, Error>) -> ())
+    func fetchRepositories(_ platform: Platform, organization: String, completion: @escaping (Result<[Repository], Error>) -> ())
 }
 
 public class GithubAPISDK: GithubAPISDKProtocol {
@@ -34,7 +34,7 @@ public class GithubAPISDK: GithubAPISDKProtocol {
         _provider = provider
     }
     
-    public func fetchRepositories(_ platform: Platform, organization: String, completion: @escaping (Result<FetchRepositoriesResponse, Error>) -> ()) {
+    public func fetchRepositories(_ platform: Platform, organization: String, completion: @escaping (Result<[Repository], Error>) -> ()) {
         
         // TODO: The request mays be improved by doing an enum as Moya does
         return _provider
@@ -48,7 +48,7 @@ public class GithubAPISDK: GithubAPISDKProtocol {
                     do {
                         let response = try JSONDecoder().decode(FetchRepositoriesResponse.self, from: data)
                         self?._log.d(String(describing: response))
-                        completion(.success(response))
+                        completion(.success(response.repositories))
                     } catch {
                         self?._log.e(error.localizedDescription)
                         completion(.failure(error))

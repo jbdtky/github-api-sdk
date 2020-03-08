@@ -19,10 +19,8 @@ class GithubAPISDKTests: XCTestCase {
         
         sdk.fetchRepositories(.ios, organization: "test") { response in
             switch response {
-            case let .success(response):
-                XCTAssertFalse(response.incompleteResults)
-                XCTAssertEqual(response.totalCount, 8)
-                XCTAssertEqual(response.repositories.count, 8)
+            case let .success(repositories):
+                XCTAssertEqual(repositories.count, 8)
                 
                 expectSuccess.fulfill()
                 /// Check more in deep the details
