@@ -14,23 +14,25 @@ class APIThrottlerTests: XCTestCase {
     func testSerial() {
         let throttler = APIThrottler(maximumSimultaneously: 1)
         
-        let group = DispatchGroup()
+        var expectations: [XCTestExpectation] = []
         let amountOfRequest = 2
         var shouldBeId = 0
         
         for i in 0...amountOfRequest {
-            group.enter()
+            let expectSuccess = expectation(description: "Success \(i)")
+            expectations.append(expectSuccess)
             
             let request = APIRequestMockWithDelay(UInt32(amountOfRequest - i), completion: { _ in
                 // The request should be sequencial
                 XCTAssertEqual(shouldBeId, i)
                 shouldBeId += 1
-                group.leave()
+                
+                expectSuccess.fulfill()
             })
             
             throttler.enqueue(request)
         }
         
-        group.wait()
+        wait(for: expectations, timeout: 5.0)
     }
 }
