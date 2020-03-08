@@ -1,0 +1,16 @@
+PODS:
+  - GithubAPISDK (1.0.0)
+
+DEPENDENCIES:
+  - GithubAPISDK (from `../../`)
+
+EXTERNAL SOURCES:
+  GithubAPISDK:
+    :path: "../../"
+
+SPEC CHECKSUMS:
+  GithubAPISDK: 4d75bec04dbb12143ed7efda97063293b8896e13
+
+PODFILE CHECKSUM: 21a686610e22d9650bf08fe6f0e2c0883bfbd46f
+
+COCOAPODS: 1.8.4
