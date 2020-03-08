@@ -49,6 +49,8 @@ instance.fetchRepositories(.ios, organization: "myorg") { result in
 }
 ```
 
+You can implement your own API provider using the protocol `APIProviderProtocol` and provide it to the SDK during the `initialization`. So it allows you to use your favorite framework like Moya, Alamofire or APIKit.
+
 ## Contribution
 
 Please feel free to submit a PR for any contribution.
