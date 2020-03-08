@@ -8,21 +8,24 @@
 
 import Foundation
 
-// Singleton
-class APIProvider {
+public protocol APIProviderProtocol {
+    func request(_ urlRequest: URLRequest, completion: @escaping (Result<Data, Error>) -> ())
+}
+
+public class DefaultAPIProvider: APIProviderProtocol {
     
     private let _throttler: APIThrottler
     
-    init(maximumSimultaneously: Int? = nil, queue: DispatchQueue? = nil) {
+    public init(maximumSimultaneously: Int? = nil, queue: DispatchQueue? = nil) {
         _throttler = APIThrottler(maximumSimultaneously: maximumSimultaneously, queue: queue)
     }
     
+    /// Internal usage
     init(_ throttler: APIThrottler) {
         _throttler = throttler
     }
     
-    // Request
-    func request(_ urlRequest: URLRequest, completion: @escaping (Result<Data, Error>) -> ()) {
+    public func request(_ urlRequest: URLRequest, completion: @escaping (Result<Data, Error>) -> ()) {
         let request = APIRequest(urlRequest, completion: completion)
         _throttler.enqueue(request)
     }

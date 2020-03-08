@@ -16,7 +16,7 @@ public struct Repository: Codable {
     
     enum CodingKeys: String, CodingKey {
         case name
-        case privacyStatus = "privacy"
+        case privacyStatus = "private"
         case description
         case language
     }

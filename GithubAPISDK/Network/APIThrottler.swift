@@ -9,7 +9,7 @@
 import Foundation
 
 // Basic semaphore to throttle properly my requests
-class APIThrottler {
+internal class APIThrottler {
     private let _semaphore: DispatchSemaphore
     private let _queue: DispatchQueue
     

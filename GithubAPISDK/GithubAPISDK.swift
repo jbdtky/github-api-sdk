@@ -1,5 +1,5 @@
 //
-//  APIService.swift
+//  GithubAPISDK.swift
 //  GithubAPISDK
 //
 //  Created by Jean-Baptiste Dominguez on 2020/03/08.
@@ -13,13 +13,13 @@ public enum Platform: String {
     case android = "android"
 }
 
-public protocol APIService {
+public protocol GithubAPISDKProtocol {
     func fetchRepositories(_ platform: Platform, organization: String, completion: @escaping (Result<FetchRepositoriesResponse, Error>) -> ())
 }
 
-public class APIServiceImpl: APIService {
+public class GithubAPISDK: GithubAPISDKProtocol {
     
-    private var _provider: APIProvider
+    private var _provider: APIProviderProtocol
     
     private var _baseUrl: URL {
         guard let url = URL(string: "https://api.github.com") else {
@@ -29,7 +29,7 @@ public class APIServiceImpl: APIService {
         return url
     }
     
-    init(_ provider: APIProvider = APIProvider()) {
+    public init(_ provider: APIProviderProtocol = DefaultAPIProvider()) {
         _provider = provider
     }
     
@@ -56,6 +56,3 @@ public class APIServiceImpl: APIService {
             }
     }
 }
-
-// Mock API
-// completion([RepoData(name: "GithubAPI", owner: OwnerData(username: "jbdtky", avatarUrl: nil))])

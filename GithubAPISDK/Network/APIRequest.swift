@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum RequestError: Error {
+internal enum RequestError: Error {
     case emptyData
 }
 
-class APIRequest {
+internal class APIRequest {
     
     private let _urlRequest: URLRequest
     let _completion: (Result<Data, Error>) -> ()

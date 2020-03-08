@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension URL {
+internal extension URL {
     func appendingQuery(_ query: String) -> URL {
         var components = URLComponents(string: self.absoluteString)
         components?.query = query

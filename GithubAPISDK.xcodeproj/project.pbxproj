@@ -11,15 +11,17 @@
 		3BE5DC21241491970082500F /* APIThrottler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC18241491970082500F /* APIThrottler.swift */; };
 		3BE5DC22241491970082500F /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC19241491970082500F /* APIProvider.swift */; };
 		3BE5DC23241491970082500F /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC1A241491970082500F /* APIRequest.swift */; };
-		3BE5DC24241491970082500F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC1C241491970082500F /* APIService.swift */; };
+		3BE5DC24241491970082500F /* GithubAPISDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC1C241491970082500F /* GithubAPISDK.swift */; };
 		3BE5DC25241491970082500F /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC1E241491970082500F /* URL+Extensions.swift */; };
 		3BE5DC282414929F0082500F /* APIProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC262414929F0082500F /* APIProviderTests.swift */; };
 		3BE5DC292414929F0082500F /* APIThrottlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC272414929F0082500F /* APIThrottlerTests.swift */; };
-		3BE5DC2D241493FE0082500F /* APIServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC2A241493FE0082500F /* APIServiceMock.swift */; };
+		3BE5DC2D241493FE0082500F /* APIProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC2A241493FE0082500F /* APIProviderMock.swift */; };
 		3BE5DC2E241493FE0082500F /* APIThrottlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC2B241493FE0082500F /* APIThrottlerMock.swift */; };
 		3BE5DC2F241493FE0082500F /* APIRequestMockWithDelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC2C241493FE0082500F /* APIRequestMockWithDelay.swift */; };
 		3BE5DC3A241499D70082500F /* FetchRepositoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC39241499D70082500F /* FetchRepositoriesResponse.swift */; };
 		3BE5DC3C24149A2F0082500F /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC3B24149A2F0082500F /* Repository.swift */; };
+		3BE5DC3E2414A7370082500F /* response_success.json in Resources */ = {isa = PBXBuildFile; fileRef = 3BE5DC3D2414A7370082500F /* response_success.json */; };
+		3BE5DC412414A7D60082500F /* GithubAPISDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE5DC402414A7D60082500F /* GithubAPISDKTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,16 +41,18 @@
 		3BE5DC18241491970082500F /* APIThrottler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIThrottler.swift; sourceTree = "<group>"; };
 		3BE5DC19241491970082500F /* APIProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		3BE5DC1A241491970082500F /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
-		3BE5DC1C241491970082500F /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		3BE5DC1C241491970082500F /* GithubAPISDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubAPISDK.swift; sourceTree = "<group>"; };
 		3BE5DC1E241491970082500F /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
 		3BE5DC262414929F0082500F /* APIProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviderTests.swift; sourceTree = "<group>"; };
 		3BE5DC272414929F0082500F /* APIThrottlerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIThrottlerTests.swift; sourceTree = "<group>"; };
-		3BE5DC2A241493FE0082500F /* APIServiceMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceMock.swift; sourceTree = "<group>"; };
+		3BE5DC2A241493FE0082500F /* APIProviderMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProviderMock.swift; sourceTree = "<group>"; };
 		3BE5DC2B241493FE0082500F /* APIThrottlerMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIThrottlerMock.swift; sourceTree = "<group>"; };
 		3BE5DC2C241493FE0082500F /* APIRequestMockWithDelay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestMockWithDelay.swift; sourceTree = "<group>"; };
 		3BE5DC342414962E0082500F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3BE5DC39241499D70082500F /* FetchRepositoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRepositoriesResponse.swift; sourceTree = "<group>"; };
 		3BE5DC3B24149A2F0082500F /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		3BE5DC3D2414A7370082500F /* response_success.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = response_success.json; sourceTree = "<group>"; };
+		3BE5DC402414A7D60082500F /* GithubAPISDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPISDKTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 				3BE5DC30241494010082500F /* Mock */,
 				3BE5DC262414929F0082500F /* APIProviderTests.swift */,
 				3BE5DC272414929F0082500F /* APIThrottlerTests.swift */,
+				3BE5DC402414A7D60082500F /* GithubAPISDKTests.swift */,
 				3BE5DC05241490FE0082500F /* Info.plist */,
 			);
 			path = GithubAPISDKTests;
@@ -106,7 +111,7 @@
 				3BE5DC1D241491970082500F /* Extensions */,
 				3BE5DC14241491970082500F /* Models */,
 				3BE5DC17241491970082500F /* Network */,
-				3BE5DC1B241491970082500F /* Services */,
+				3BE5DC1C241491970082500F /* GithubAPISDK.swift */,
 			);
 			path = GithubAPISDK;
 			sourceTree = "<group>";
@@ -130,14 +135,6 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		3BE5DC1B241491970082500F /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				3BE5DC1C241491970082500F /* APIService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		3BE5DC1D241491970082500F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,11 +146,20 @@
 		3BE5DC30241494010082500F /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				3BE5DC2A241493FE0082500F /* APIServiceMock.swift */,
+				3BE5DC3F2414A7420082500F /* Data */,
+				3BE5DC2A241493FE0082500F /* APIProviderMock.swift */,
 				3BE5DC2C241493FE0082500F /* APIRequestMockWithDelay.swift */,
 				3BE5DC2B241493FE0082500F /* APIThrottlerMock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		3BE5DC3F2414A7420082500F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3BE5DC3D2414A7370082500F /* response_success.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE5DC3E2414A7370082500F /* response_success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,7 +277,7 @@
 				3BE5DC21241491970082500F /* APIThrottler.swift in Sources */,
 				3BE5DC23241491970082500F /* APIRequest.swift in Sources */,
 				3BE5DC3A241499D70082500F /* FetchRepositoriesResponse.swift in Sources */,
-				3BE5DC24241491970082500F /* APIService.swift in Sources */,
+				3BE5DC24241491970082500F /* GithubAPISDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,9 +287,10 @@
 			files = (
 				3BE5DC2F241493FE0082500F /* APIRequestMockWithDelay.swift in Sources */,
 				3BE5DC282414929F0082500F /* APIProviderTests.swift in Sources */,
+				3BE5DC412414A7D60082500F /* GithubAPISDKTests.swift in Sources */,
 				3BE5DC2E241493FE0082500F /* APIThrottlerMock.swift in Sources */,
 				3BE5DC292414929F0082500F /* APIThrottlerTests.swift in Sources */,
-				3BE5DC2D241493FE0082500F /* APIServiceMock.swift in Sources */,
+				3BE5DC2D241493FE0082500F /* APIProviderMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
