@@ -22,7 +22,7 @@ class APIThrottlerTests: XCTestCase {
             let expectSuccess = expectation(description: "Success \(i)")
             expectations.append(expectSuccess)
             
-            let request = APIRequestMockWithDelay(UInt32(amountOfRequest - i), completion: { _ in
+            let request = APIRequestMockWithDelay(UInt32(amountOfRequest - i + 1), completion: { _ in
                 // The request should be sequencial
                 XCTAssertEqual(shouldBeId, i)
                 shouldBeId += 1
@@ -33,6 +33,6 @@ class APIThrottlerTests: XCTestCase {
             throttler.enqueue(request)
         }
         
-        wait(for: expectations, timeout: 5.0)
+        wait(for: expectations, timeout: 15.0)
     }
 }

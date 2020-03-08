@@ -26,10 +26,11 @@ internal class APIThrottler {
             self?._semaphore.wait()
             
             // Execute
-            request.resume()
-            
-            // Free a slot
-            self?._semaphore.signal()
+            request.resume() {
+                
+                // Free a slot
+                self?._semaphore.signal()
+            }
         }
     }
 }

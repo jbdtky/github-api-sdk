@@ -20,8 +20,16 @@ class APIRequestMockWithDelay: APIRequest {
         super.init(URLRequest(url: URL(fileURLWithPath: "")), completion: completion)
     }
     
-    override func resume() {
-        sleep(_delay)
-        _completion(.success(Data()))
+    override func resume(_ completion: @escaping () -> ()) {
+        // Simulate the API call
+        DispatchQueue(label: "api-request", qos: .background).async {
+            sleep(self._delay)
+            
+            // Completion for the User
+            self._completion(.success(Data()))
+            
+            // Completion for the throtter
+            completion()
+        }
     }
 }

@@ -32,8 +32,9 @@ internal class APIRequest {
         #endif
     }
     
-    func resume() {
+    func resume(_ completion: @escaping () -> ()) {
         URLSession.shared.dataTask(with: _urlRequest, completionHandler: { (data, response, error) in
+            // Completion for the User
             if let error = error {
                 self._completion(.failure(error))
             } else {
@@ -43,6 +44,9 @@ internal class APIRequest {
                     self._completion(.failure(RequestError.emptyData))
                 }
             }
+            
+            // Completion for the throtter
+            completion()
         }).resume()
     }
 }
