@@ -5,5 +5,50 @@
 ![Compatibility](https://img.shields.io/badge/Swift-5.0-orange.svg) 
 ![License](https://img.shields.io/badge/License-Apache_2.0-lightgrey.svg) 
 
-# github-api-sdk
-Search a repository using the Github API.
+# Github API SDK
+Search Github repositories by platform and organization.
+
+This project is mainly inspired from [this project](https://github.com/jbdtky/github-api-ios)
+
+## Installation
+
+### CocoaPods
+
+#### Podfile
+
+```ruby
+target 'DemoApp' do
+  pod 'GithubAPISDK', :git => 'https://github.com/jbdtky/github-api-sdk.git'
+end
+```
+#### Commands
+
+```bash
+$ pod install
+```
+
+## Usage
+
+There is 2 platforms available
+- `.ios`
+- `.android`
+
+```swift
+let instance = GithubAPISDK(
+        DefaultAPIProvider(
+            maximumSimultaneously: 10,
+            queue: DispatchQueue.global(qos: .utility)))
+
+instance.fetchRepositories(.ios, organization: "myorg") { result in
+    switch result {
+    case let .success(response):
+        print(response.repositories)
+    case let .failure(error):
+        print(error)
+    }
+}
+```
+
+## Contribution
+
+Please feel free to submit a PR for any contribution.
