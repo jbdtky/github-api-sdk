@@ -3,7 +3,7 @@
 ![Platform](https://img.shields.io/badge/platform-ios-black.svg) 
 ![Compatibility](https://img.shields.io/badge/iOS-+13.0-orange.svg) 
 ![Compatibility](https://img.shields.io/badge/Swift-5.0-orange.svg) 
-![License](https://img.shields.io/badge/License-Apache-2.0-lightgrey.svg) 
+![License](https://img.shields.io/badge/License-Apache_2.0-lightgrey.svg) 
 
 # github-api-sdk
 Search a repository using the Github API.
