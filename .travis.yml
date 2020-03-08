@@ -1,6 +1,6 @@
-language: objective-c
-osx_image: xcode11.1
+language: swift # is an alias to objective-c
+osx_image: xcode11.3
 script:
-  - xcodebuild -project GithubAPISDK.xcodeproj -scheme GithubAPISDK -destination platform\=iOS\ Simulator,OS\=13.3,name\=iPhone\ 11 -enableCodeCoverage YES test > /dev/null
+  - xcodebuild -project GithubAPISDK.xcodeproj -scheme GithubAPISDK -destination platform\=iOS\ Simulator,OS\=13.2.2,name\=iPhone\ 11 -enableCodeCoverage YES test > /dev/null
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'GithubAPISDK' > /dev/null
